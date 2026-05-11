@@ -3,15 +3,13 @@
     margin: 0;
     padding: 0;
 }
-:root {
-    color-background: #F3EAE3;
-}
+
 html {
     font-family: "Montserrat", sans-serif;
 }
 
 body {
-    background-color: color-background;
+    background-color: #F3EAE3;
 }
 
 main {
