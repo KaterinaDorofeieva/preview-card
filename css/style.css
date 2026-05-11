@@ -63,12 +63,12 @@ img {
 }
 
 .card__text {
-    padding: 40px;
+    padding: 2.5rem;
 
 }
 
 .card__logo {
-    letter-spacing: 4.6px;
+    letter-spacing: 0.28rem;
     text-transform: uppercase;
     font-weight: 500;
     color: hsl(228, 12%, 48%);
