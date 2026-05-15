@@ -7,10 +7,9 @@
 :root {
     --color-bg: #F3EAE3;
     --color-descr: hsl(228, 12%, 48%);
-    --color-bgcard: #fff;
+    --color-bgcard: #ffffff;
     --color-btn: hsl(158, 36%, 37%);
-    --color-btntext: #fff;
-
+    --color-btntext: #ffffff;
 }
 
 html {
@@ -26,53 +25,32 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 1rem;
 }
 
+/* CARD */
 
 .card {
     display: flex;
-    width: 45.25rem;
+    max-inline-size: clamp(20rem, 90vw, 45.25rem);
     background-color: var(--color-bgcard);
-    border-radius: 15px;
-}
-
-.card__img {
-    display: block;
-    max-inline-size: 100%;
-    width: 1.25rem;
-    height: 100vh;
-}
-
-.card__btn {
-    margin-top: 31px;
-    width: 100%;
-    padding: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    background-color: var(--color-btn);
-    border: none;
-    border-radius: 0.6rem;
-    color: var(--color-bgcard);
-    font-size: 1.12rem;
-    font-weight: 700;
-    cursor: pointer;
+    border-radius: 0.9375rem;
     overflow: hidden;
 }
 
-
+/* IMAGE */
 
 .card__img {
+    display: block;
+    inline-size: 50%;
+    block-size: auto;
     object-fit: cover;
-    width: 50%;
-    height: 100%;
-    border-radius: 15px 0 0 15px;
 }
 
-.card__text {
-    padding: 2.5rem;
+/* CONTENT */
 
+.card__text {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .card__logo {
@@ -80,41 +58,92 @@ main {
     text-transform: uppercase;
     font-weight: 500;
     color: var(--color-descr);
+    font-size: 0.875rem;
 }
 
 .card__title {
-    margin-block-start: 1.12rem;
+    margin-block-start: 1rem;
     line-height: 1.1;
     font-family: "Fraunces", serif;
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: clamp(2rem, 4vw, 2.3rem);
     text-transform: capitalize;
 }
 
 .card__descr {
-    margin-top: 1.31rem;
-    font-size: 1.06rem;
+    margin-block-start: 1.3rem;
+    font-size: 1rem;
     line-height: 1.7;
     font-weight: 500;
     color: var(--color-descr);
 }
 
+/* PRICE */
+
 .card__price {
-    margin-top: 32px;
+    margin-block-start: 2rem;
     display: flex;
-    color: var(--color-descr);
     align-items: center;
     gap: 1.25rem;
-
+    color: var(--color-descr);
 }
 
 .card__new-price {
     font-family: "Fraunces", serif;
     color: var(--color-btn);
     font-weight: 700;
-    font-size: 2.43rem;
+    font-size: clamp(2rem, 4vw, 2.43rem);
 }
 
 .card__old-price {
     text-decoration: line-through;
+    font-size: 0.95rem;
+}
+
+/* BUTTON */
+
+.card__btn {
+    margin-block-start: 2rem;
+    inline-size: 100%;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    background-color: var(--color-btn);
+    color: var(--color-btntext);
+
+    border: none;
+    border-radius: 0.625rem;
+
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+.card__btn:hover {
+    opacity: 0.9;
+}
+
+.card__btn img {
+    inline-size: 1rem;
+    block-size: 1rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 40rem) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card__img {
+        inline-size: 100%;
+        max-block-size: 20rem;
+    }
 }
