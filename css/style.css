@@ -3,9 +3,16 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
-  --color-bg: #F3EAE3;
+    --color-bg: #F3EAE3;
+    --color-descr: hsl(228, 12%, 48%);
+    --color-bgcard: #fff;
+    --color-btn: hsl(158, 36%, 37%);
+    -color-btntext: #fff;
+
 }
+
 html {
     font-family: "Montserrat", sans-serif;
 }
@@ -25,30 +32,29 @@ main {
 .card {
     display: flex;
     width: 45.25rem;
-
-    background-color: #fff;
+    background-color: var(--color-bgcard);
     border-radius: 15px;
 }
 
-img {
+.card__img {
     display: block;
     max-inline-size: 100%;
     width: 1.25rem;
-    height: 1.25rem;
+    height: 100vh;
 }
 
 .card__btn {
-    margin-block-start: clamp(1rem, 2vw, 2.5rem);
+    margin-top: 31px;
     width: 100%;
-    padding: clamp(0.75rem, 2vw, 1.5rem);
+    padding: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
-    background-color: hsl(158, 36%, 37%);
+    background-color: var(--color-btn);
     border: none;
     border-radius: 0.6rem;
-    color: #fff;
+    color: var(--color-bgcard);
     font-size: 1.12rem;
     font-weight: 700;
     cursor: pointer;
@@ -73,7 +79,7 @@ img {
     letter-spacing: 0.28rem;
     text-transform: uppercase;
     font-weight: 500;
-    color: hsl(228, 12%, 48%);
+    color: var(--color-descr);
 }
 
 .card__title {
@@ -90,13 +96,13 @@ img {
     font-size: 1.06rem;
     line-height: 1.7;
     font-weight: 500;
-    color: hsl(228, 12%, 48%);
+    color: var(--color-descr);
 }
 
 .card__price {
-    margin-top: 21.5rem;
+    margin-top: 32px;
     display: flex;
-    color: hsl(228, 12%, 48%);
+    color: var(--color-descr);
     align-items: center;
     gap: 1.25rem;
 
@@ -104,7 +110,7 @@ img {
 
 .card__new-price {
     font-family: "Fraunces", serif;
-    color: hsl(158, 36%, 37%);
+    color: var(--color-btn);
     font-weight: 700;
     font-size: 2.43rem;
 }
